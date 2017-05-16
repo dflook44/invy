@@ -1,0 +1,33 @@
+<style>
+    .header {
+    color: white;
+    font-family: 'Share', cursive;
+    background: black
+    }
+    .info {
+    color: black;
+    font-family: 'VT323', monospace;
+    }
+
+</style>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Share" rel="stylesheet">
+</head>
+<html>
+<div class="header">
+<center><h2>Item Details</h2></center>
+</div>
+<div class="info">
+<h3>
+{{item.title}}
+</h3>
+<p>
+Description: {{item.description}}
+</p>
+
+<p>Stock: {{item.amount}}</p>
+
+<p>Cost: {{item.cost}}</p>
+</div>
+</html>
