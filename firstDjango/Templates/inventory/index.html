@@ -1,5 +1,43 @@
-<p>homepage</p>
+<style>
+    .header {
+    color: white;
+    font-family: 'Share', cursive;
+    background: black
+    }
+    .info {
+    color: black;
+    font-family: 'VT323', monospace;
+    }
 
+</style>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Share" rel="stylesheet">
+</head>
+<html>
+<div class="header">
+<center><h2>Home</h2></center>
+</div>
+<div class="info">
+    <table>
+        <tr>
+            <td align="center">
+                Item
+            </td>
+            <td align="center">
+                Stock
+            </td>
+        </tr>
 {% for item in items %}
-    <li>{{item.title}} - {{item.id}}</li>
+        <tr>
+            <td>
+                <a href="{% url 'item_detail' item.id %}">{{item.title}}</a>
+            </td>
+            <td align="right">
+                {{item.amount}}
+            </td>
+        </tr>
 {% endfor %}
+    </table>
+</div>
+</html>
